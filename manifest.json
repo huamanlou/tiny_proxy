@@ -1,0 +1,21 @@
+{
+  "name": "迷你代理",
+  "description": "tiny proxy",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action":{
+    "default_title": "111",
+    "default_icon": {
+      "16": "img/icon.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "proxy",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}
