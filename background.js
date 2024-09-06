@@ -43,6 +43,7 @@ function updateFunction() {
       rules: {
         proxyForHttp: proxy_config,
         proxyForHttps: proxy_config,
+        proxyForFtp: proxy_config,
         bypassList: ["foobar.com"]
       }
     };
