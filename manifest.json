@@ -13,7 +13,7 @@
     },
     "default_popup": "popup.html"
   },
-  "permissions": ["proxy", "storage"],
+  "permissions": ["proxy", "storage", "privacy"],
   "background": {
     "service_worker": "background.js",
     "type": "module"

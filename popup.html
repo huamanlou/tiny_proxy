@@ -1,25 +1,76 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+	<style>
+		#main {
+			width: 270px;
+			padding: 0 8px;
+			font-size: 14px;
+		}
 
+		.row {
+			display: flex;
+			line-height: 25px;
+			margin-bottom: 5px;
+		}
+
+		.row label {
+			width: 80px;
+		}
+
+		.save {
+			clear: both;
+			text-align: right;
+		}
+	</style>
 </head>
-<body>
-	<div>
-		协议：
-		<input type="text" id="scheme" name="scheme" />
-		地址：
-		<input type="text" id="host" name="host"  />
-		端口：
-		<input type="number" id="port" name="port" />
-		备注：
-		<input type="text" id="desc" name="desc" />
 
-		<button id="submit">保存</button>
+<body>
+	<div id="main">
+		<h2>代理配置</h2>
+
+		<div class="row">
+			<label>协议</label>
+			<input type="text" id="scheme" name="scheme" />
+		</div>
+
+		<div class="row">
+			<label>地址</label>
+			<input type="text" id="host" name="host" />
+		</div>
+
+		<div class="row">
+			<label>端口</label>
+			<input type="number" id="port" name="port" />
+		</div>
+		<div class="row">
+			<label>备注</label>
+			<input type="text" id="desc" name="desc" />
+		</div>
+		<div class="row">
+			<label>屏蔽webrtc</label>
+			<input type="checkbox" id="block_webrtc" name="webrtc" />
+		</div>
+		<div class="row">
+			<label>语言配置</label>
+			chrome://settings/languages
+		</div>
+		<div class="row">
+			<label>quic关闭</label>
+			chrome://flags/#enable-quic
+		</div>
+
+		<div class="save">
+			<button id="submit">保存</button>
+		</div>
+
 
 	</div>
 	<script src="popup.js"></script>
 </body>
+
 </html>
